@@ -1,5 +1,6 @@
 package com.project.entity;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class Project {
 	private int projectId;
 	private String projectName;
 	private String projectDescription;
-	private Date startDate;
+	private LocalDate startDate;
 	private String projectStatus;
 	private List<User> teamMembers;		//Set Data Type
 	
@@ -19,7 +20,7 @@ public class Project {
 	}
 
 
-	public Project(int projectId, String projectName, String projectDescription, Date startDate, String projectStatus,
+	public Project(int projectId, String projectName, String projectDescription, LocalDate startDate, String projectStatus,
 			List<User> teamMembers) {
 		super();
 		this.projectId = projectId;
@@ -61,12 +62,12 @@ public class Project {
 	}
 
 
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 
