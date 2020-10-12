@@ -238,7 +238,7 @@ public class UserDAOImpl implements UserDAO{
 	@Override
 	public Timestamp getLastLogin(String email) throws SQLException {
 	   //  userList.clear();
-		String sql = "select lastLoggedIn from RegisteredUsers where userEmail = ?";
+		String sql = "select lastLogIn from RegisteredUser where userEmail = ?";
 		PreparedStatement ps=null;
 		Timestamp time = null;
 		int result=0;
@@ -249,7 +249,7 @@ public class UserDAOImpl implements UserDAO{
 			ResultSet resultset = ps.executeQuery();
 			if(resultset.next())
 			{
-				time = resultset.getTimestamp("lastLoggedIn");
+				time = resultset.getTimestamp("lastLogIn");
 			}
 			
 			System.out.println("timestamp is:"+time);
