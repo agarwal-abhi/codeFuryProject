@@ -65,7 +65,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("activeUser", verifiedUser);
 			
 			if(verifiedUser.getUserType().equalsIgnoreCase("Manager")) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/Manager.jsp");	//redirect to manager profile
+				RequestDispatcher dispatcher = request.getRequestDispatcher("UserServlet");	//redirect to manager profile
 				dispatcher.forward(request, response);
 			}
 			else if(verifiedUser.getUserType().equalsIgnoreCase("Developer")) {
