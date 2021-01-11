@@ -9,7 +9,7 @@ import com.project.entity.Bug;
 public interface Application {
 	
 	public static void main(String[] args) {
-		
+		Date startDate;
 		Date openDate= new Date(2020-12-15);
 		
 		

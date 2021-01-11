@@ -143,7 +143,7 @@ public class TesterServlet extends HttpServlet {
 		
 		session.invalidate();
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
 		
 		dispatcher.forward(request, response);
 		
@@ -157,9 +157,9 @@ public class TesterServlet extends HttpServlet {
 		String bugTitle= request.getParameter("bugTitle");
 		String bugDescription = request.getParameter("bugDescription");
 		String severityLevel = request.getParameter("severityLevel");
-		int createdBy= 102;
+//		int createdBy= user.getUserId();
 		
-		bug = new Bug(projectId, bugTitle, bugDescription, severityLevel, createdBy);
+		bug = new Bug(projectId, bugTitle, bugDescription, severityLevel, testerId);
 		
 		try {
 			boolean flag= bugDAO.add(bug);

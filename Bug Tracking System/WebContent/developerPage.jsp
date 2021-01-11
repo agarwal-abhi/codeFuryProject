@@ -9,12 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bug Tracking System</title>
     <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <title>Bug Tracking System</title>
+    
     
     
 </head>
 <body style="overflow-y: hidden;">
+
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Bug Tracking System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

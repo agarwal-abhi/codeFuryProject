@@ -79,7 +79,7 @@ public class RegisterServlet extends HttpServlet {
 				{
 					if(registeredUserDao.add(user))
 					{	//Successful registration
-						RequestDispatcher rd= request.getRequestDispatcher("Home.jsp");
+						RequestDispatcher rd= request.getRequestDispatcher("index.html");
 						rd.forward(request, response);
 					}
 					else 

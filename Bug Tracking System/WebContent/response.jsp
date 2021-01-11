@@ -10,6 +10,6 @@
 <!-- both failure and sucess or other exceptions messages can be displayed here -->
 <h1>Status</h1>
 <h2>${requestScope.message}</h2>
-<a href="index.html">Home</a>
+<a href="index.jsp">Home</a>
 </body>
 </html>

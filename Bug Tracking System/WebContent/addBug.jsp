@@ -12,10 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Bug Page</title>
     <link rel="stylesheet" href="styles/css/bootstrap.min.css">
-    <script src="styles/js/jquery-3.5.1.js"></script>
-    <script src="styles/js/bootstrap.min.js" ></script>
+    
 </head>
 <body>
+
+    <script src="styles/js/jquery-3.5.1.js"></script>
+    <script src="styles/js/bootstrap.min.js" ></script>
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Bug Tracking System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +28,7 @@
     <div style="display: flex; height: 100%; width: 100%; justify-content: center;">
     <div style="width: 400px; height: 600px; background-color: #f6f5f5; margin: 7%;" >
     <div class="btn-group-vertical" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; width: 100%; padding-bottom: 10% ; padding-left: 10%; padding-right: 10%; ">
-        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly;">
+        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-evenly;"></div>
             <div style="width: 100%; display: flex; justify-content: center;">
                 <h2>Add a Bug</h2>
             </div>
@@ -85,6 +87,9 @@
 
 
 </form>
- 
+ </div>
+    </div>
+    </div>
+    
 </body>
 </html>

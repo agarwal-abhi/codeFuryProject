@@ -40,14 +40,15 @@ public class UserServlet extends HttpServlet {
 		UserDAO userDao = new UserDAOImpl();
 		//String email = "abc@gmail.com";
 		//String sql = "select * from userTable where userEmail = ?";
-		int id = 5;
+		HttpSession session = request.getSession(true);
+		User entity = (User)session.getAttribute("activeUser");
 		User user=null;
 		try {
-			user  = userDao.findById(id);
+			user  = userDao.findById(entity.getUserId());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		HttpSession session = request.getSession(true);
+		
 		Timestamp timeStamp=null;
 		try {
 			timeStamp = userDao.getLastLogin(user.getUserEmail());
@@ -57,12 +58,15 @@ public class UserServlet extends HttpServlet {
 		System.out.println(timeStamp);
 		if(session != null)
 		{
+			session.setAttribute("activeUser", user);
+			session.setAttribute("userName", user.getUserName());
+
 			session.setAttribute("userEmail",user.getUserEmail());
 			session.setAttribute("userType",user.getUserType());
 			session.setAttribute("timeStamp", timeStamp);
 		}
 		System.out.println("let's see details on webpage..."+user.getUserEmail()+" ,"+user.getUserType()+" ,"+timeStamp);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/mainpageForManager.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/managerPage.jsp");
         dispatcher.forward(request, response);
 	}
 

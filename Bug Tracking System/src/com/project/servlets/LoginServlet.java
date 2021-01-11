@@ -14,6 +14,8 @@ import com.project.daos.RegisteredUserDAOImpl;
 import com.project.entity.RegisteredUser;
 import com.project.entity.User;
 
+
+
 /**
  * @author Madhura Satao
  * 
@@ -65,15 +67,15 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("activeUser", verifiedUser);
 			
 			if(verifiedUser.getUserType().equalsIgnoreCase("Manager")) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("/Manager.jsp");	//redirect to manager profile
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/UserServlet");	//redirect to manager profile
 				dispatcher.forward(request, response);
 			}
 			else if(verifiedUser.getUserType().equalsIgnoreCase("Developer")) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("developer");		//redirect to developer profile
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/developer");		//redirect to developer profile
 				dispatcher.forward(request, response);
 			}
 			else if(verifiedUser.getUserType().equalsIgnoreCase("Tester")) {
-				RequestDispatcher dispatcher = request.getRequestDispatcher("tester");			//redirect to tester profile
+				RequestDispatcher dispatcher = request.getRequestDispatcher("/tester");			//redirect to tester profile
 				dispatcher.forward(request, response);
 			}
 		}
